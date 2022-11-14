@@ -7,11 +7,7 @@ $apellidos2="";
 $observaciones="";
 $direccion="";
 
-//SI SE PULSA SUBMIT
-//if (isset($_POST['submit'])){
-
-    //nombre
-
+    //NOMBRE
     if (isset($_SESSION['nombre'])){
         $nombre = $_SESSION['nombre'];
         $_SESSION['nombre'] =recogerVar($nombre);
@@ -34,7 +30,7 @@ $direccion="";
         exit;
     }
 
-    //apellidos
+    //APELLIDOS
     if (isset($_POST['apellidos'])){
         $apellidos = $_POST['apellidos'];
         $_SESSION['apellidos'] = recogerVar($apellidos);
@@ -56,7 +52,7 @@ $direccion="";
         exit;
     }
 
-    //apellidos2
+    //APELLIDOS2
     if (isset($_SESSION['apellidos2'])){
         $apellidos2 =$_SESSION['apellidos2'];
         $_SESSION['apellidos2'] = recogerVar($apellidos2);
@@ -81,7 +77,6 @@ $direccion="";
     }
 
     //DIRECCION
-    
     if (isset($_SESSION['direccion'])){
         $direccion =$_SESSION['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
@@ -117,25 +112,4 @@ $direccion="";
         echo "<p>Error: debe introducir una dirección<p>";
 
     }
-//} 
-
-
-if(empty($nombre)){
-    $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-    header("location:$url");
-    exit;
-}
-
-if(empty($apellidos)){
-    $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-    header("location:$url");
-    exit;
-}
-
-if(empty($apellidos2)){
-    $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-    header("location:$url");
-    exit;
-}
-
 ?>

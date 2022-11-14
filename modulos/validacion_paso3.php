@@ -22,7 +22,7 @@
             }
 
 
-            //apellidos
+            //APELLIDOS
             if (isset($_SESSION['apellidos'])){
                 $apellidos =$_SESSION['apellidos'];
                 $_SESSION['apellidos'] = recogerVar($apellidos);
@@ -38,7 +38,7 @@
                 $_SESSION['apellidos'] = recogerVar($apellidos);
             }
 
-            //apellidos2
+            //APELLIDOS2
             if (isset($_SESSION['apellidos2'])){
                 $apellidos2 =$_SESSION['apellidos2'];
                 $_SESSION['apellidos2'] = recogerVar($apellidos2);
@@ -94,7 +94,7 @@
             if (isset($_GET['observaciones'])){
                 $observaciones =$_GET['observaciones'];
                 $_SESSION['observaciones'] = recogerVar($observaciones);
-                
+
             }
 
             if(empty($observaciones)){
