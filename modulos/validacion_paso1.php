@@ -14,7 +14,6 @@ $apellidos2="";
         if(isset($_SESSION['nombre']) && !empty($_SESSION['nombre'])){
             $nombre = $_SESSION['nombre'];
             $_SESSION['nombre'] =recogerVar($nombre);
-            echo"<p>Nombre existe en session.<p>";
         }
         
         //comprobamos errores y si existe en post 
@@ -22,7 +21,6 @@ $apellidos2="";
             $nombre = $_POST['nombre'];
             $_SESSION['nombre'] =recogerVar($nombre);
        }
-
 
        //APELLIDOS
         if (isset($_GET['apellidos'])  && empty($_SESSION['apellidos'])){
@@ -34,7 +32,6 @@ $apellidos2="";
         if (isset($_SESSION['apellidos']) && !empty($_SESSION['apellidos'])){
             $apellidos =$_SESSION['apellidos'];
             $_SESSION['apellidos'] = recogerVar($apellidos);
-            echo"<p>Apellido1 existe en session<p>";
         }
 
         if (isset($_POST['apellidos'])){

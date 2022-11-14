@@ -21,7 +21,6 @@ $direccion="";
     if (isset($_GET['nombre'])){
         $nombre = $_GET['nombre'];
         $_SESSION['nombre'] =recogerVar($nombre);
-    
     }
 
     if(empty($nombre)){
@@ -64,12 +63,11 @@ $direccion="";
         $_SESSION['apellidos2'] = recogerVar($apellidos2);
     }
 
-    
     if (isset($_GET['apellidos2'])){
         $apellidos2 =$_GET['apellidos2'];
         $_SESSION['apellidos2'] = recogerVar($apellidos2);
-        
-    }
+
+    }  
     
     if(empty($apellidos2)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
