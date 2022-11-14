@@ -1,0 +1,20 @@
+.nav {
+    text-decoration: none;
+}
+
+.nav_ul {
+    text-align: center;
+}
+
+.nav_li {
+    text-align: center;
+}
+
+.formulario {
+    padding: auto;
+    margin: auto;
+}
+
+.button {
+ border-radius: 20%;
+}
