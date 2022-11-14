@@ -94,6 +94,7 @@
             if (isset($_GET['observaciones'])){
                 $observaciones =$_GET['observaciones'];
                 $_SESSION['observaciones'] = recogerVar($observaciones);
+                
             }
 
             if(empty($observaciones)){

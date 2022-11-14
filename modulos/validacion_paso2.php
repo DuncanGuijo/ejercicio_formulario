@@ -28,7 +28,6 @@ $direccion="";
     
     }
 
-    
     if(empty($nombre)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
         header("location:$url");
@@ -72,6 +71,7 @@ $direccion="";
     if (isset($_GET['apellidos2'])){
         $apellidos2 =$_GET['apellidos2'];
         $_SESSION['apellidos2'] = recogerVar($apellidos2);
+        
     }
     
     if(empty($apellidos2)){
@@ -81,7 +81,7 @@ $direccion="";
     }
 
     //DIRECCION
-    /*
+    
     if (isset($_SESSION['direccion'])){
         $direccion =$_SESSION['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
@@ -95,13 +95,10 @@ $direccion="";
     if (isset($_GET['direccion'])){
         $direccion =$_GET['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
+        echo "<p>Error: debe introducir una dirección<p>";
+        
     }
     
-    if(empty($direccion)){
-        $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-        header("location:$url");
-        exit;
-    }
 
     //OBSERVACIONES
     if (isset($_SESSION['observaciones'])){
@@ -117,13 +114,9 @@ $direccion="";
     if (isset($_GET['observaciones'])){
         $observaciones =$_GET['observaciones'];
         $_SESSION['observaciones'] = recogerVar($observaciones);
+        echo "<p>Error: debe introducir una dirección<p>";
+
     }
-    
-    if(empty($observaciones)){
-        $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-        header("location:$url");
-        exit;
-    }*/
 //} 
 
 
@@ -132,13 +125,7 @@ if(empty($nombre)){
     header("location:$url");
     exit;
 }
-/*
-if(empty($direccion)){
-    $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-    header("location:$url");
-    exit;
-}
-*/
+
 if(empty($apellidos)){
     $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
     header("location:$url");
@@ -150,11 +137,5 @@ if(empty($apellidos2)){
     header("location:$url");
     exit;
 }
-/*
-if(empty($observaciones)){
-    $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
-    header("location:$url");
-    exit;
-}
-*/
+
 ?>
