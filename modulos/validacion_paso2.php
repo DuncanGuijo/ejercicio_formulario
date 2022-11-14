@@ -8,7 +8,7 @@ $observaciones="";
 $direccion="";
 
 //SI SE PULSA SUBMIT
-if (isset($_POST['submit'])){
+//if (isset($_POST['submit'])){
 
     //nombre
 
@@ -124,7 +124,7 @@ if (isset($_POST['submit'])){
         header("location:$url");
         exit;
     }*/
-} 
+//} 
 
 
 if(empty($nombre)){
