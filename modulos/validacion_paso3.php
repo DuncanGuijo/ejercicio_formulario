@@ -1,7 +1,11 @@
 <?php 
-            //NOMBRE
             $nombre =""; 
+            $apellidos="";
+            $apellidos2="";
+            $direccion ="";
+            $observaciones="";
 
+            //NOMBRE
             if (isset($_SESSION['nombre'])){
                 $nombre = $_SESSION['nombre'];
                 $_SESSION['nombre'] =recogerVar($nombre);
@@ -19,8 +23,6 @@
 
 
             //apellidos
-            $apellidos="";
-            
             if (isset($_SESSION['apellidos'])){
                 $apellidos =$_SESSION['apellidos'];
                 $_SESSION['apellidos'] = recogerVar($apellidos);
@@ -36,9 +38,26 @@
                 $_SESSION['apellidos'] = recogerVar($apellidos);
             }
 
+            //apellidos2
+            if (isset($_SESSION['apellidos2'])){
+                $apellidos2 =$_SESSION['apellidos2'];
+                $_SESSION['apellidos2'] = recogerVar($apellidos2);
+            }
+
+            if (isset($_POST['apellidos2'])){
+                $apellidos2 =$_POST['apellidos2'];
+                $_SESSION['apellidos2'] = recogerVar($apellidos2);
+            }
+
+            if (isset($_GET['apellidos2'])){
+                $apellidos2 =$_GET['apellidos2'];
+                $_SESSION['apellidos2'] = recogerVar($apellidos2);
+                echo"<p> Error: Ingrese un segundo apellido.<p>";
+
+            }
+
 
             //DIRECCION
-            $direccion ="";
             if (isset($_SESSION['direccion'])){
                 $direccion =$_SESSION['direccion'];
                 $_SESSION['direccion'] = recogerVar($direccion);
@@ -54,9 +73,14 @@
                 $_SESSION['direccion'] = recogerVar($direccion);
             }
 
+            if(empty($direccion)){
+                $url = "paso2.php?direccion=$direccion&observaciones=$observaciones";
+                header("location:$url");
+                exit;
+            }
+
 
             //OBSERVACIONES
-            $observaciones="";
             if (isset($_SESSION['observaciones'])){
                 $observaciones =$_SESSION['observaciones'];
                 $_SESSION['observaciones'] = recogerVar($observaciones);
@@ -71,4 +95,11 @@
                 $observaciones =$_GET['observaciones'];
                 $_SESSION['observaciones'] = recogerVar($observaciones);
             }
+
+            if(empty($observaciones)){
+                $url = "paso2.php?direccion=$direccion&observaciones=$observaciones";
+                header("location:$url");
+                exit;
+            }
+
         ?> 
