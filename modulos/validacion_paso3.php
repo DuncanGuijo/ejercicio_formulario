@@ -16,13 +16,7 @@ $observaciones="";
         $_SESSION['nombre'] =recogerVar($nombre);
         }
 
-    /*if (isset($_GET['nombre'])){
-        $nombre = $_GET['nombre'];
-        $_SESSION['nombre'] =recogerVar($nombre);
-        }
-    */
-
-        //APELLIDOS
+    //APELLIDOS
     if (isset($_SESSION['apellidos'])){
         $apellidos =$_SESSION['apellidos'];
         $_SESSION['apellidos'] = recogerVar($apellidos);
@@ -33,11 +27,6 @@ $observaciones="";
         $_SESSION['apellidos'] = recogerVar($apellidos);
         }
 
-    /*if (isset($_GET['apellidos'])){
-        $apellidos =$_GET['apellidos'];
-        $_SESSION['apellidos'] = recogerVar($apellidos);
-        }
-    */
     //APELLIDOS2
     if (isset($_SESSION['apellidos2'])){
         $apellidos2 =$_SESSION['apellidos2'];
@@ -49,12 +38,7 @@ $observaciones="";
         $_SESSION['apellidos2'] = recogerVar($apellidos2);
         }
 
-    /*if (isset($_GET['apellidos2'])){
-        $apellidos2 =$_GET['apellidos2'];
-        $_SESSION['apellidos2'] = recogerVar($apellidos2);
-        }
-    */
-        //DIRECCION
+    //DIRECCION
     if (isset($_SESSION['direccion'])){
         $direccion =$_SESSION['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
