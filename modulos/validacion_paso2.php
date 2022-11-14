@@ -76,7 +76,13 @@ $direccion="";
     }
 
     //DIRECCION
-    if (isset($_SESSION['direccion'])){
+    if (isset($_GET['direccion']) && empty($_SESSION['direccion'])){
+        $direccion =$_GET['direccion'];
+        $_SESSION['direccion'] = recogerVar($direccion);
+        echo "<p>Error: debe introducir una dirección.<p>";
+        
+    }
+    if (isset($_SESSION['direccion']) && !empty($_SESSION['direccion'] )){
         $direccion =$_SESSION['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
     }
@@ -86,16 +92,14 @@ $direccion="";
         $_SESSION['direccion'] = recogerVar($direccion);
     }
 
-    if (isset($_GET['direccion'])){
-        $direccion =$_GET['direccion'];
-        $_SESSION['direccion'] = recogerVar($direccion);
-        echo "<p>Error: debe introducir una dirección.<p>";
-        
-    }
-    
-
     //OBSERVACIONES
-    if (isset($_SESSION['observaciones'])){
+
+    if (isset($_GET['observaciones']) && empty($_SESSION['observaciones'])){
+        $observaciones =$_GET['observaciones'];
+        $_SESSION['observaciones'] = recogerVar($observaciones);
+        echo "<p>Error: debe introducir una observación.<p>";
+    }
+    if (isset($_SESSION['observaciones']) && !empty($_SESSION['observaciones'])){
         $observaciones =$_SESSION['observaciones'];
         $_SESSION['observaciones'] = recogerVar($observaciones);
     }
@@ -103,12 +107,5 @@ $direccion="";
     if (isset($_POST['observaciones'])){
         $observaciones =$_POST['observaciones'];
         $_SESSION['observaciones'] = recogerVar($observaciones);
-    }
- 
-    if (isset($_GET['observaciones'])){
-        $observaciones =$_GET['observaciones'];
-        $_SESSION['observaciones'] = recogerVar($observaciones);
-        echo "<p>Error: debe introducir una observación.<p>";
-
     }
 ?>

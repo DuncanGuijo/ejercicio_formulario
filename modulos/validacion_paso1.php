@@ -4,7 +4,7 @@ $nombre ="";
 $apellidos="";
 $apellidos2="";
 
-        //comprobamos si existe en session
+        //NOMBRE
         if (isset($_GET['nombre']) && empty($_SESSION['nombre'])){
             $nombre = $_GET['nombre'];
             $_SESSION['nombre'] = recogerVar($nombre);
@@ -16,7 +16,6 @@ $apellidos2="";
             $_SESSION['nombre'] =recogerVar($nombre);
         }
         
-        //comprobamos errores y si existe en post 
         if (isset($_POST['nombre'])){
             $nombre = $_POST['nombre'];
             $_SESSION['nombre'] =recogerVar($nombre);
