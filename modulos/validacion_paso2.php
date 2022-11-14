@@ -31,13 +31,14 @@ $direccion="";
     }
 
     //APELLIDOS
-    if (isset($_POST['apellidos'])){
-        $apellidos = $_POST['apellidos'];
-        $_SESSION['apellidos'] = recogerVar($apellidos);
-    }
 
     if (isset($_SESSION['apellidos'])){
         $apellidos =$_SESSION['apellidos'];
+        $_SESSION['apellidos'] = recogerVar($apellidos);
+    }
+
+    if (isset($_POST['apellidos'])){
+        $apellidos = $_POST['apellidos'];
         $_SESSION['apellidos'] = recogerVar($apellidos);
     }
 
@@ -90,7 +91,7 @@ $direccion="";
     if (isset($_GET['direccion'])){
         $direccion =$_GET['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
-        echo "<p>Error: debe introducir una dirección<p>";
+        echo "<p>Error: debe introducir una dirección.<p>";
         
     }
     
@@ -109,7 +110,7 @@ $direccion="";
     if (isset($_GET['observaciones'])){
         $observaciones =$_GET['observaciones'];
         $_SESSION['observaciones'] = recogerVar($observaciones);
-        echo "<p>Error: debe introducir una dirección<p>";
+        echo "<p>Error: debe introducir una observación.<p>";
 
     }
 ?>
