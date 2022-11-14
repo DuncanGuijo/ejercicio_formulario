@@ -4,14 +4,14 @@
 $nombre =""; 
 $apellidos="";
 $apellidos2="";
-$direccion="";
 $observaciones="";
-
+$direccion="";
 
 //SI SE PULSA SUBMIT
 if (isset($_POST['submit'])){
 
     //nombre
+
     if (isset($_SESSION['nombre'])){
         $nombre = $_SESSION['nombre'];
         $_SESSION['nombre'] =recogerVar($nombre);
@@ -27,12 +27,13 @@ if (isset($_POST['submit'])){
         $_SESSION['nombre'] =recogerVar($nombre);
     
     }
-    /*
+
+    
     if(empty($nombre)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
         header("location:$url");
         exit;
-    }*/
+    }
 
     //apellidos
     if (isset($_POST['apellidos'])){
@@ -49,12 +50,12 @@ if (isset($_POST['submit'])){
         $apellidos =$_GET['apellidos'];
         $_SESSION['apellidos'] = recogerVar($apellidos);
     }
-    /*
+    
     if(empty($apellidos)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
         header("location:$url");
         exit;
-    }*/
+    }
 
     //apellidos2
     if (isset($_SESSION['apellidos2'])){
@@ -72,15 +73,15 @@ if (isset($_POST['submit'])){
         $apellidos2 =$_GET['apellidos2'];
         $_SESSION['apellidos2'] = recogerVar($apellidos2);
     }
-    /*
+    
     if(empty($apellidos2)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
         header("location:$url");
         exit;
-    }*/
+    }
 
     //DIRECCION
-
+    /*
     if (isset($_SESSION['direccion'])){
         $direccion =$_SESSION['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
@@ -95,12 +96,12 @@ if (isset($_POST['submit'])){
         $direccion =$_GET['direccion'];
         $_SESSION['direccion'] = recogerVar($direccion);
     }
-    /*
+    
     if(empty($direccion)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
         header("location:$url");
         exit;
-    }*/
+    }
 
     //OBSERVACIONES
     if (isset($_SESSION['observaciones'])){
@@ -117,7 +118,7 @@ if (isset($_POST['submit'])){
         $observaciones =$_GET['observaciones'];
         $_SESSION['observaciones'] = recogerVar($observaciones);
     }
-    /*
+    
     if(empty($observaciones)){
         $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
         header("location:$url");
@@ -131,13 +132,13 @@ if(empty($nombre)){
     header("location:$url");
     exit;
 }
-
+/*
 if(empty($direccion)){
     $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
     header("location:$url");
     exit;
 }
-
+*/
 if(empty($apellidos)){
     $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
     header("location:$url");
@@ -149,11 +150,11 @@ if(empty($apellidos2)){
     header("location:$url");
     exit;
 }
-
+/*
 if(empty($observaciones)){
     $url = "paso1.php?nombre=$nombre&apellidos=$apellidos&apellidos2=$apellidos2";
     header("location:$url");
     exit;
 }
-
+*/
 ?>
